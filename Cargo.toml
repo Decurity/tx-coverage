@@ -1,0 +1,32 @@
+[package]
+name = "tx-coverage"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "tx-coverage"
+path = "src/main.rs"
+
+[dependencies]
+clap = "4.5.4"
+eyre = "0.6.12"
+forge = { git = "https://github.com/foundry-rs/foundry", rev = "89f0fb923773cf0f8f966290e579bae92f505077", version = "0.2.0" }
+foundry-cli = { git = "https://github.com/foundry-rs/foundry", rev = "89f0fb923773cf0f8f966290e579bae92f505077", version = "0.2.0" }
+foundry-common = { git = "https://github.com/foundry-rs/foundry", rev = "89f0fb923773cf0f8f966290e579bae92f505077", version = "0.2.0" }
+foundry-config = { git = "https://github.com/foundry-rs/foundry", rev = "89f0fb923773cf0f8f966290e579bae92f505077", version = "0.2.0" }
+foundry-evm = { git = "https://github.com/foundry-rs/foundry", rev = "89f0fb923773cf0f8f966290e579bae92f505077", version = "0.2.0" }
+foundry-evm-core = { git = "https://github.com/foundry-rs/foundry", rev = "89f0fb923773cf0f8f966290e579bae92f505077", version = "0.2.0" }
+alloy-provider = { git = "https://github.com/alloy-rs/alloy", rev = "7629f79", default-features = false }
+alloy-rpc-types = { git = "https://github.com/alloy-rs/alloy", rev = "7629f79", default-features = false }
+tokio = { version = "1", features = ["macros", "signal"] }
+foundry-compilers = "0.3.15"
+indicatif = "0.17"
+rustc-hash = "1.1.0"
+tracing = "0.1"
+semver = "1.0.22"
+yansi = "1.0.1"
+reqwest = "0.12.3"
+serde = { version = "1.0.197", features = ["derive"] }
+serde_json = "1.0"
+duners = "0.0.2"
+futures = "0.3"
