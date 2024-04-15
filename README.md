@@ -35,3 +35,4 @@ Wrote LCOV report.
 
 The output is an LCOV report that can be visualized with tools like [Coverage Gutters](https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters). In VSCode you can see which lines were never executed and potentially contain bugs.
 
+<img width="985" alt="demo" src="https://github.com/Decurity/tx-coverage/assets/150087/016beeb3-161c-45b6-bcac-5a6613d23e62">
