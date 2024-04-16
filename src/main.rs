@@ -59,6 +59,11 @@ pub struct TxCoverage {
     #[arg(long, short, env = "ETH_RPC_URL")]
     rpc_url: String,
 
+    /// The maximum number of transactions to fetch from Dune
+    /// default value: 100
+    #[arg(long, short)]
+    tx_limit: Option<usize>,
+
     /// The EVM version to use.
     ///
     /// Overrides the version specified in the config.
@@ -126,6 +131,7 @@ impl TxCoverage {
             Some(vec![
                 Parameter::text("address", &self.address),
                 Parameter::text("network", chain_id_to_dune_table.get(&chain_id).unwrap_or(&"ethereum".to_string())),
+                Parameter::text("limit", &self.tx_limit.unwrap_or(100).to_string())
             ]), 
             None).await;
             let tx_hashes: Vec<String> = match results {
